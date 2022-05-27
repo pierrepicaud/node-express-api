@@ -1,0 +1,6 @@
+/*/.terraform
+/*/*/.terraform
+**/.terraform/*
+env.*
+*.pem
+./node_module/node_modules
