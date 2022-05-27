@@ -1,0 +1,14 @@
+---
+- name: Running nodejs docker container
+  docker_container:
+    name: node-express-api
+    image: shreddedcheese/node-express-api:latest
+    ports:
+      - "443:8080"
+    state: started
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "https://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
